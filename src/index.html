@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>YTS Homepage Clone</title>
+		<link rel="stylesheet" href="styles/index.css">
+	</head>
+	
+	<body>
+
+		<main>
+			
+			<header class="header">
+				<div class="header__wrapper flex--inline center">
+					<a href="" class="header__logo">
+						<img src="https://yts.ag/assets/images/website/logo-YTS.svg" alt="" class="header__logo-image">
+					</a>
+					<div class="header__right">
+						<input type="text" name="movie-title" id="search" class="header__search text--bold text--gray" placeholder="Quick search">
+						<nav class="header__nav">
+							<a href="" class="header__link link text--bold text--gray">Home</a>
+							<a href="" class="header__link link text--bold text--gray">Browse Movies</a>
+							<a href="" class="header__link js-login-button text--bold text--white">Login</a>
+							<a href="" class="header__link js-register-button text--bold text--white">Register</a>
+						</nav>
+					</div>
+					
+					<div class="header__mobile-right">
+						<nav class="header__mobile-nav">
+							<a href="" class="header__mobile-link js-search-button" title="Search"><img class="header__mobile-icon" src="assets/images/icons/search.svg"></a>
+							<a href="" class="header__mobile-link" title="Browse"><img class="header__mobile-icon" src="assets/images/icons/browse.svg"></a>
+							<a href="" class="header__mobile-link" title="User"><img class="header__mobile-icon" src="assets/images/icons/user.svg"></a>
+						</nav>
+					</div>
+				</div>
+				
+				<div class="header__search-dropdown js-search-dropdown">
+					<div class="header__search-container center">
+						<form action="" class="header__search-form">
+							<input type="text" name="search" id="search--mobile" placeholder="Search for a movie..." class="header__mobile-search text--bold text--gray">
+							<input type="submit" value="Search" class="header__submit text--white">
+						</form>
+					</div>
+					<div class="header__search-options">
+						<div class="header__option center">
+							<h5 class="header__option-title text--bold text--gray">Quality:</h5>
+							<select name="quality" id="quality" class="header__option-select" value="All">
+								<option value="All">All</option>
+								<option value="720p">720p</option>
+								<option value="1080p">1080p</option>
+								<option value="3D">3D</option>
+							</select>
+						</div>
+						<div class="header__option center">
+							<h5 class="header__option-title text--bold text--gray">Rating:</h5>
+							<select name="rating" id="rating" class="header__option-select" value="All">
+								<option value="All">All</option>
+								<option value="9+">9+</option>
+								<option value="8+">8+</option>
+								<option value="7+">7+</option>
+								<option value="6+">6+</option>
+								<option value="5+">5+</option>
+								<option value="4+">4+</option>
+								<option value="3+">3+</option>
+								<option value="2+">2+</option>
+								<option value="1+">1+</option>
+							</select>
+						</div>
+						<div class="header__option center">
+							<h5 class="header__option-title text--bold text--gray">Genre:</h5>
+							<select name="genre" id="genre" class="header__option-select" value="All">
+								<option value="All">All</option>
+								<option value="Action">Action</option>
+								<option value="Adventure">Adventure</option>
+								<option value="Animated">Animated</option>
+								<option value="Biography">Biography</option>
+								<option value="Comedy">Comedy</option>
+								<option value="Crime">Crime</option>
+								<option value="Documentary">Documentary</option>
+							</select>
+						</div>
+						<div class="header__option center">
+							<h5 class="header__option-title text--bold text--gray">Order By:</h5>
+							<select name="order-by" id="order-by" class="header__option-select" value="Latest">
+								<option value="Latest">Latest</option>
+								<option value="Oldest">Oldest</option>
+								<option value="Seeds">Seeds</option>
+								<option value="Peers">Peers</option>
+								<option value="Year">Year</option>
+								<option value="Rating">Rating</option>
+								<option value="Likes">Likes</option>
+								<option value="Alphabetical">Alphabetical</option>
+								<option value="Downloads">Downloads</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</header>
+
+
+
+			<section class="hero">		
+				<div class="hero__head">
+					<h1 class="hero__title text--white">Download YTS YIFY movies: HD smallest size</h1>
+					<p class="hero__subtitle text--white">Welcome to the official <b>YTS.AM</b> website. Here you will be able to browse and download YIFY movies in excellent 720p, 1080p and 3D quality, all at the smallest file size. Only here: YTS Movies Torrents.</p>
+				</div>
+
+				<div class="hero__popular">
+					<h2 class="hero__popular-header">
+						<img src="assets/images/icons/star.svg" class="star" alt="">
+						<span class="hero__text text--white">Popular Downloads</span>
+					</h2>
+					
+					<div class="hero__cards center">
+						<div class="card">
+							<div class="image-container">
+								<img src="assets/images/posters/ww.png" alt="Image" class="hero__card-img image">
+								<div class="overlay">
+									<div class="info text--white">
+										<img src="assets/images/icons/star.svg" class="hero__card-star star" alt="">
+										<h1 class="rating">7.5 / 10</h1>
+									</div>
+									<div class="info text--white">
+										<h1 class="genre">Action<br>Fantasy</h1>
+									</div>
+									<div class="info">
+										<button class="button button--green text--bold text--white">View Details</button>
+									</div>
+								</div>
+							</div>
+							<a href="" class="text--bold palewhite title">Wonder Woman</a>
+							<span class="text--gray year">2017</span>
+						</div>
+
+						<div class="card">
+							<div class="image-container">
+								<img src="assets/images/posters/avengers.png" alt="Image" class="hero__card-img image">
+								<div class="overlay">
+									<div class="info text--white">
+										<img src="assets/images/icons/star.svg" class="hero__card-star star" alt="">
+										<h1 class="rating">8.6 / 10</h1>
+									</div>
+									<div class="info text--white">
+										<h1 class="genre">Action<br>Adventure</h1>
+									</div>
+									<div class="info">
+										<button class="button button--green text--bold text--white">View Details</button>
+									</div>
+								</div>
+							</div>
+							<a href="" class="text--bold palewhite title">Avengers: Infinity War</a>
+							<span class="text--gray year">2018</span>
+						</div>
+
+						<div class="card">
+							<div class="image-container">
+								<img src="assets/images/posters/dunkirk.png" alt="Image" class="hero__card-img image">
+								<div class="overlay">
+									<div class="info text--white">
+										<img src="assets/images/icons/star.svg" class="hero__card-star star" alt="">
+										<h1 class="rating">8 / 10</h1>
+									</div>
+									<div class="info text--white">
+										<h1 class="genre">Drama<br>Thriller</h1>
+									</div>
+									<div class="info">
+										<button class="button button--green text--bold text--white">View Details</button>
+									</div>
+								</div>
+							</div>
+							<a href="" class="text--bold palewhite title">Dunkirk</a>
+							<span class="text--gray year">2017</span>
+						</div>
+
+						<div class="card">
+							<div class="image-container">
+								<img src="assets/images/posters/coco.png" alt="Image" class="hero__card-img image">
+								<div class="overlay">
+									<div class="info text--white">
+										<img src="assets/images/icons/star.svg" class="hero__card-star star" alt="">
+										<h1 class="rating">8.4 / 10</h1>
+									</div>
+									<div class="info text--white">
+										<h1 class="genre">Fantasy<br>Animated</h1>
+									</div>
+									<div class="info">
+										<button class="button button--green text--bold text--white">View Details</button>
+									</div>
+								</div>
+							</div>
+							<a href="" class="text--bold palewhite title">Coco</a>
+							<span class="text--gray year">2017</span>
+						</div>
+					
+					</div>
+				</div>
+			</section>
+
+
+
+			<section class="movies">				
+				<div class="section-header flex--inline center">
+					<h4 class="movies__header text--white">Latest YIFY Movie Torrents</h4>
+					<a class="movies__browse link text--bold text--gray" href="">Browse All</a>
+				</div>
+
+				<div class="movies__main center">
+					<div class="card released">
+						<div class="image-container">
+							<span class="ribbon ribbon--black text--bold text--white">1080p</span>
+							<img src="assets/images/posters/antman.png" alt="Image" class="image">
+							<div class="overlay">
+								<div class="info text--white">
+									<img src="assets/images/icons/star.svg" class="star" alt="">
+									<h1 class="rating">7.3 / 10</h1>
+								</div>
+								<div class="info text--white">
+									<h1 class="genre">Action<br>Adventure</h1>
+								</div>
+								<div class="info">
+									<button class="button button--green text--bold text--white">View Details</button>
+								</div>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">Ant-Man And The Wasp</a>
+						<span class="text--gray year">2018</span>
+					</div>
+
+					<div class="card released">
+						<div class="image-container">
+							<span class="ribbon ribbon--blue text--bold text--white">720p</span>
+							<img src="assets/images/posters/cr.png" alt="Image" class="image">
+							<div class="overlay">
+								<div class="info text--white">
+									<img src="assets/images/icons/star.svg" class="star" alt="">
+									<h1 class="rating">7.7 / 10</h1>
+								</div>
+								<div class="info text--white">
+									<h1 class="genre">Drama<br>Fantasy</h1>
+								</div>
+								<div class="info">
+									<button class="button button--green text--bold text--white">View Details</button>
+								</div>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">Christopher Robin</a>
+						<span class="text--gray year">2018</span>
+					</div>
+
+					<div class="card released">
+						<div class="image-container">
+							<span class="ribbon ribbon--black text--bold text--white">1080p</span>
+							<img src="assets/images/posters/jl.png" alt="Image" class="image">
+							<div class="overlay">
+								<div class="info text--white">
+									<img src="assets/images/icons/star.svg" class="star" alt="">
+									<h1 class="rating">7.2 / 10</h1>
+								</div>
+								<div class="info text--white">
+									<h1 class="genre">Action<br>Fantasy</h1>
+								</div>
+								<div class="info">
+									<button class="button button--green text--bold text--white">View Details</button>
+								</div>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">Justice League</a>
+						<span class="text--gray year">2017</span>
+					</div>
+
+					<div class="card released">
+						<div class="image-container">
+							<span class="ribbon ribbon--black text--bold text--white">1080p</span>
+							<img src="assets/images/posters/it.png" alt="Image" class="image">
+							<div class="overlay">
+								<div class="info text--white">
+									<img src="assets/images/icons/star.svg" class="star" alt="">
+									<h1 class="rating">7.9 / 10</h1>
+								</div>
+								<div class="info text--white">
+									<h1 class="genre">Horror<br>Fantasy</h1>
+								</div>
+								<div class="info">
+									<button class="button button--green text--bold text--white">View Details</button>
+								</div>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">IT</a>
+						<span class="text--gray year">2017</span>
+					</div>
+
+					<div class="card released">
+						<div class="image-container">
+							<span class="ribbon ribbon--black text--bold text--white">1080p</span>
+							<img src="assets/images/posters/firstman.png" alt="Image" class="image">
+							<div class="overlay">
+								<div class="info text--white">
+									<img src="assets/images/icons/star.svg" class="star" alt="">
+									<h1 class="rating">6.1 / 10</h1>
+								</div>
+								<div class="info text--white">
+									<h1 class="genre">Drama<br>History</h1>
+								</div>
+								<div class="info">
+									<button class="button button--green text--bold text--white">View Details</button>
+								</div>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">First Man</a>
+						<span class="text--gray year">2018</span>
+					</div>
+
+					<div class="card released">
+						<div class="image-container">
+							<span class="ribbon ribbon--blue text--bold text--white">720p</span>
+							<img src="assets/images/posters/bp.png" alt="Image" class="image">
+							<div class="overlay">
+								<div class="info text--white">
+									<img src="assets/images/icons/star.svg" class="star" alt="">
+									<h1 class="rating">7.4 / 10</h1>
+								</div>
+								<div class="info text--white">
+									<h1 class="genre">Action<br>Fantasy</h1>
+								</div>
+								<div class="info">
+									<button class="button button--green text--bold text--white">View Details</button>
+								</div>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">Black Panther</a>
+						<span class="text--gray year">2018</span>
+					</div>
+
+					<div class="card released">
+						<div class="image-container">
+							<span class="ribbon ribbon--black text--bold text--white">1080p</span>
+							<img src="assets/images/posters/incredibles.png" alt="Image" class="image">
+							<div class="overlay">
+								<div class="info text--white">
+									<img src="assets/images/icons/star.svg" class="star" alt="">
+									<h1 class="rating">8.1 / 10</h1>
+								</div>
+								<div class="info text--white">
+									<h1 class="genre">Animated<br>Fantasy</h1>
+								</div>
+								<div class="info">
+									<button class="button button--green text--bold text--white">View Details</button>
+								</div>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">Incredibles 2</a>
+						<span class="text--gray year">2018</span>
+					</div>
+
+					<div class="card released">
+						<div class="image-container">
+							<span class="ribbon ribbon--blue text--bold text--white">720p</span>
+							<img src="assets/images/posters/jw.png" alt="Image" class="image">
+							<div class="overlay">
+								<div class="info text--white">
+									<img src="assets/images/icons/star.svg" class="star" alt="">
+									<h1 class="rating">6.3 / 10</h1>
+								</div>
+								<div class="info text--white">
+									<h1 class="genre">Adventure<br>Sci-Fi</h1>
+								</div>
+								<div class="info">
+									<button class="button button--green text--bold text--white">View Details</button>
+								</div>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">Jurassic World: Fallen Kingdom</a>
+						<span class="text--gray year">2018</span>
+					</div>
+
+				</div>
+			</section>
+
+
+
+			<section class="upcoming">				
+				<div class="section-header flex--inline center">
+					<h4 class="text--white">Upcoming YIFY Movies</h4>
+					<a class="link text--bold text--gray" href="">Request a Movie</a>
+				</div>
+
+				<div class="upcoming__main center">			
+					<div class="card">
+						<div class="image-container">
+							<img src="assets/images/posters/mi6.png" alt="Image" class="image">
+							<div class="overlay">
+								<button class="button button--orange text--bold text--white imdb">View IMDb</button>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">Mission: Impossible – Fallout</a>
+						<span class="text--gray year">2018</span>
+					</div>
+
+					<div class="card">
+						<div class="image-container">
+							<img src="assets/images/posters/venom.png" alt="Image" class="image">
+							<div class="overlay">
+								<button class="button button--orange text--bold text--white imdb">View IMDb</button>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">Venom</a>
+						<span class="text--gray year">2018</span>
+					</div>
+
+					<div class="card">
+						<div class="image-container">
+							<img src="assets/images/posters/tp.png" alt="Image" class="image">
+							<div class="overlay">
+								<button class="button button--orange text--bold text--white imdb">View IMDb</button>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">The Predator</a>
+						<span class="text--gray year">2018</span>
+					</div>
+
+					<div class="card">
+						<div class="image-container">
+							<img src="assets/images/posters/halloween.png" alt="Image" class="image">
+							<div class="overlay">
+								<button class="button button--orange text--bold text--white imdb">View IMDb</button>
+							</div>
+						</div>
+						<a href="" class="text--bold palewhite title">Halloween</a>
+						<span class="text--gray year">2018</span>
+					</div>
+
+				</div>
+			</section>
+
+
+
+			<section class="footer">
+				<div class="footer__mobile-block">
+					<div class="footer__mobile-link-block">
+						<a href="" class="footer__mobile-link">
+							<img class="footer__mobile-link-icon" src="assets/images/icons/suggestions.svg" alt=""><br>
+							<span class="footer__mobile-link-label text--white">Suggestions</span>
+						</a>
+					</div>
+					<div class="footer__mobile-link-block">
+						<a href="" class="footer__mobile-link">
+							<img class="footer__mobile-link-icon" src="assets/images/icons/requests.svg" alt=""><br>
+							<span class="footer__mobile-link-label text--white">Requests</span>
+						</a>
+					</div>
+					<div class="footer__mobile-link-block">
+						<a href="" class="footer__mobile-link">
+							<img class="footer__mobile-link-icon" src="assets/images/icons/blog.svg" alt=""><br>
+							<span class="footer__mobile-link-label text--white">Blog</span>
+						</a>
+					</div>
+					<div class="footer__mobile-link-block">
+						<a href="" class="footer__mobile-link">
+							<img class="footer__mobile-link-icon" src="assets/images/icons/api.svg" alt=""><br>
+							<span class="footer__mobile-link-label text--white">API</span>
+						</a>
+					</div>
+					<div class="footer__mobile-link-block">
+						<a href="" class="footer__mobile-link">
+							<img class="footer__mobile-link-icon" src="assets/images/icons/rss.svg" alt=""><br>
+							<span class="footer__mobile-link-label text--white">RSS</span>
+						</a>
+					</div>
+					<div class="footer__mobile-link-block">
+						<a href="" class="footer__mobile-link">
+							<img class="footer__mobile-link-icon" src="assets/images/icons/contact.svg" alt=""><br>
+							<span class="footer__mobile-link-label text--white">Contact</span>
+						</a>
+					</div>
+				</div>
+				<div class="footer__bar">
+					<span class="footer__credit text--gray">YTS @ 2011-2018</span>
+					<ul class="footer__list">
+						<li class="footer__list-item"><a href="" class="text--bold link text--gray">Blog</a></li>
+						<li class="footer__list-item"><a href="" class="text--bold link text--gray">DMCA</a></li>
+						<li class="footer__list-item"><a href="" class="text--bold link text--gray">API</a></li>
+						<li class="footer__list-item"><a href="" class="text--bold link text--gray">RSS</a></li>
+						<li class="footer__list-item"><a href="" class="text--bold link text--gray">Contact</a></li>
+						<li class="footer__list-item"><a href="" class="text--bold link text--gray">Browse Movies</a></li>
+						<li class="footer__list-item"><a href="" class="text--bold link text--gray">Requests</a></li>
+						<li class="footer__list-item"><a href="" class="text--bold link text--gray">Login</a></li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="form js-form">
+				<div class="form__overlay">
+					
+					<div class="form__wrapper">
+						<div class="form__tabs">
+							<label class="form__login-tab js-login-tab text--gray active">Login</label>
+							<label class="form__register-tab js-register-tab text--gray">Register</label>
+						</div>
+						<div class="form__container">
+							<form action="" class="form__login js-login-form">
+								<div class="form__field">
+									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/user.svg" alt=""></span>
+									<input class="form__input" type="text" name="login-user" id="login-user" placeholder="Username or Email">
+								</div>
+								<div class="form__field">
+									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/password.svg" alt=""></span>
+									<input class="form__input" type="password" name="login-password" id="login-password" placeholder="Password">
+								</div>
+								<input class="form__submit button--green text--bold text--white" type="submit" value="Login">
+							</form>
+
+							<form action="" class="form__register js-register-form">
+								<div class="form__field">
+									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/user.svg" alt=""></span>
+									<input class="form__input" type="text" name="register-user" id="register-user" placeholder="Username">
+								</div>
+								<div class="form__field">
+									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/email.svg" alt=""></span>
+									<input class="form__input" type="text" name="register-email" id="register-email" placeholder="Email">
+								</div>
+								<div class="form__field">
+									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/password.svg" alt=""></span>
+									<input class="form__input" type="text" name="register-password" id="register-password" placeholder="Password">
+								</div>
+								<div class="form__field">
+									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/password.svg" alt=""></span>
+									<input class="form__input" type="password" id="confirmed-pw" placeholder="Confirm Password">
+								</div>
+								<input class="form__submit button--green text--bold text--white" type="submit" value="Register">
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</section>
+		
+		</main>
+		
+		
+
+		
+		<script src="assets/vendors/vendors.min.js"></script>
+		<script src="scripts/index.js"></script>
+	</body>
+</html>

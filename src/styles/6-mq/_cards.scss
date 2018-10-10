@@ -1,0 +1,20 @@
+@media (max-width: 767px) {
+	.card {
+		width: 45%;
+
+		.overlay {
+			display: none;
+		}
+
+		.ribbon {
+			top: 1.7vw;
+			left: -4.5vw;
+			width: 18vw;
+			font-size: 2.2vw;
+		}
+
+		&:not(:nth-child(1)):not(:nth-child(2)) {
+			margin-top: 1rem;
+		}
+	}
+}

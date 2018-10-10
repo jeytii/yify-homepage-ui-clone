@@ -1,0 +1,53 @@
+.hero {
+	background-image: url('../assets/images/posters/background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: linear-gradient(
+			to bottom,
+			rgba(29,29,29,0.65) 0,
+			rgba(29,29,29,1) 100%
+		);
+		z-index: -1;
+	}
+
+	&__head {
+		padding-top: 5.5rem;
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 3vw;
+		text-shadow: 1px 2px 5px #111;
+	}
+
+	&__subtitle {
+		width: 58%;
+		margin: auto;
+		font-size: 1.25vw;
+		padding: 1.5rem 0;
+	}
+
+	&__popular-header {
+		text-align: center;
+		padding-bottom: 1.5rem;
+	}
+
+	&__cards {
+		border-top: 1px solid rgba(255,255,255,.2);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 1.5rem;
+	}
+}

@@ -1,0 +1,36 @@
+{
+  "name": "yts-clone",
+  "version": "1.0.0",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "start": "gulp serve --env development",
+    "build:serve": "gulp build:serve --env production"
+  },
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "browser-sync": "^2.24.5",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-environment": "^1.5.2",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "stream-series": "^0.1.1"
+  }
+}

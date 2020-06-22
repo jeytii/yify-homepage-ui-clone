@@ -1,26 +1,12 @@
 .footer {
 	background: $black;
-	text-align: center;
-	border-top: 1px solid rgba(255,255,255,.1);
 
 	&__bar {
-		border-top: 1px solid rgba(255,255,255,.1);
 		padding: 1.5rem 0;
 	}
 
-	&__credit, &__list {
-		display: inline-block;
-	}
-
 	&__list-item {
-		display: inline-block;
 		margin: 0 1rem;
-	}
-
-	&__mobile-block {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
 	}
 
 	&__mobile-link-block {

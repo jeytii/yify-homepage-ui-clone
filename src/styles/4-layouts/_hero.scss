@@ -1,17 +1,13 @@
 .hero {
-	background-image: url('../assets/images/posters/background.png');
+	background-image: url('https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781640/yts-clone/posters/background_oh1fqb.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: relative;
 	z-index: 1;
 
 	&:after {
 		content: '';
 		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
+		@include coords(0, 0, 0, 0);
 		background: linear-gradient(
 			to bottom,
 			rgba(29,29,29,0.65) 0,
@@ -22,7 +18,6 @@
 
 	&__head {
 		padding-top: 5.5rem;
-		text-align: center;
 	}
 
 	&__title {
@@ -38,16 +33,10 @@
 	}
 
 	&__popular-header {
-		text-align: center;
 		padding-bottom: 1.5rem;
 	}
 
 	&__cards {
-		border-top: 1px solid rgba(255,255,255,.2);
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		flex-wrap: wrap;
 		padding: 1.5rem;
 	}
 }

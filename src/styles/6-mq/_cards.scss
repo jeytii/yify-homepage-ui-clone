@@ -7,8 +7,7 @@
 		}
 
 		.ribbon {
-			top: 1.7vw;
-			left: -4.5vw;
+			@include coords(1.7vw, null, null, -4.5vw);
 			width: 18vw;
 			font-size: 2.2vw;
 		}

@@ -9,11 +9,9 @@
 	}
 
 	.image-container {
-		border: 6px solid #fff;
+		border: 6px solid $white;
 		border-radius: 0.3rem;
-		cursor: pointer;
 		overflow: hidden;
-		position: relative;
 
 		&:hover {
 			border-color: $green;
@@ -28,23 +26,12 @@
 		}
 	}
 
-	.image {
-		width: 100%;
-	}
-
 	.overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
+		@include coords(0, null, null, 0);
 		height: 100%;
 		background: rgba(0, 0, 0, 0.8);
 		opacity: 0;
 		transition: opacity 250ms ease-in-out;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
 	}
 
 	.button {
@@ -54,11 +41,9 @@
 
 	.info {
 		padding: 10% 0;
-		text-align: center;
 	}
 
 	.title {
-		display: block;
 		margin: 0.2rem 0 0.2rem 0.2rem;
 		overflow: hidden;
 		white-space: nowrap;

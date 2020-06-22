@@ -1,19 +1,19 @@
 * {
 	outline: none;
 	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
 
-html, body {
-	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6 {
+html, body, h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
 a[href] {
 	text-decoration: none;
+
+	&.link:hover {
+		color: lighten($gray, 25%);
+	}
 }
 
 ul {

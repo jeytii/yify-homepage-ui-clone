@@ -1,49 +1,66 @@
-$(document).ready(function() {
+const query = document.querySelector.bind(document)
+const links = document.querySelectorAll('a')
 
-	function unlink(e) {
-		e.preventDefault();
+function unlink(e) {
+	e.preventDefault()
+}
+
+function toggleDropdown() {
+	query('.js-search-dropdown').classList.toggle('dropped')
+}
+
+function toggleForm(keywordShow, keywordHide) {
+	query('.js-form').classList.add('shown')
+
+	query(`.js-${keywordHide}-tab`).classList.remove('active-tab')
+	query(`.js-${keywordHide}-form`).classList.remove('active-form')
+
+	query(`.js-${keywordShow}-tab`).classList.add('active-tab')
+	query(`.js-${keywordShow}-form`).classList.add('active-form')
+}
+
+function toggleActive(name, event) {
+	event.target.classList.add('active-tab')
+
+	if (name === 'login') {
+		query('.js-login-form').classList.add('active-form')
+
+		query('.js-register-tab').classList.remove('active-tab')
+		query('.js-register-form').classList.remove('active-form')
+	}
+	else {
+		query('.js-register-form').classList.add('active-form')
+
+		query('.js-login-tab').classList.remove('active-tab')
+		query('.js-login-form').classList.remove('active-form')
+	}
+}
+
+function hideForm(e) {
+	if (e.key !== 'Escape') {
+		return
 	}
 
-	function slideDropdown() {
-		$('.js-search-dropdown').slideToggle();
+	$('.js-form').removeClass('shown')
+}
+
+function closeForm(e) {
+	if (e.target !== query('.form__overlay')) {
+		return
 	}
 
-	function toggleForm(keywordShow, keywordHide) {
-		$('.js-form').addClass('shown');
+	e.target.parentElement.classList.remove('shown')
+}
 
-		$(`.js-${keywordHide}-tab`).removeClass('active-tab');
-		$(`.js-${keywordHide}-form`).removeClass('active-form');
-
-		$(`.js-${keywordShow}-tab`).addClass('active-tab');
-		$(`.js-${keywordShow}-form`).addClass('active-form');
-	}
-
-	function toggleActive() {
-		var name = $(this).attr('class').split(' ')[1].split('-')[1];
-		
-		$(this).addClass('active-tab').siblings().removeClass('active-tab');
-		$(`.js-${name}-form`).addClass('active-form').siblings().removeClass('active-form');
-	}
-
-	function hideForm(e) {
-		if(e.key === 'Escape') {
-			$('.js-form').removeClass('shown');
-		}
-	}
-
-	function closeForm(e) {
-		if($(e.target).is('.form__overlay')) {
-			$(e.target).parent().removeClass('shown');
-		}
-	}
-
-
-	$('a').on('click', unlink);
-	$(window).on('keyup', hideForm);
-	$(window).on('click', closeForm);
-	$('.js-search-button').on('click', slideDropdown);
-	$('.js-login-tab, .js-register-tab').on('click', toggleActive)
-	$('.js-login-button').on('click', toggleForm.bind(null, 'login', 'register'));
-	$('.js-register-button').on('click', toggleForm.bind(null, 'register', 'login'));
-
+links.forEach(link => {
+	link.addEventListener('click', unlink)
 })
+
+window.addEventListener('keyup', hideForm)
+window.addEventListener('click', closeForm)
+
+query('.js-search-button').addEventListener('click', toggleDropdown)
+query('.js-login-tab').addEventListener('click', toggleActive.bind(null, 'login'))
+query('.js-register-tab').addEventListener('click', toggleActive.bind(null, 'register'))
+query('.js-login-button').addEventListener('click', toggleForm.bind(null, 'login', 'register'))
+query('.js-register-button').addEventListener('click', toggleForm.bind(null, 'register', 'login'))

@@ -1,14 +1,8 @@
 .form {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
+	@include coords(0, 0, 0, 0);
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.75);
 	z-index: 20;
-	display: none;
 
 	&__wrapper {
 		width: 550px;
@@ -17,23 +11,24 @@
 	}
 
 	&__tabs {
-		display: flex;
-		align-items: center;
-		background: $palewhite;
 		border-radius: 0.4rem 0.4rem 0 0;
 	}
 
 	&__login-tab,
 	&__register-tab {
-		flex: 1;
-		text-align: center;
 		padding: 1.5rem 0;
 		font-size: 1.1rem;
-		cursor: pointer;
+	}
+
+	&__login-tab {
+		border-top-left-radius: 0.4rem;
+	}
+
+	&__register-tab {
+		border-top-right-radius: 0.4rem;
 	}
 
 	&__container {
-		background: #ffffff;
 		padding: 1.5rem 0;
 		border-radius: 0 0 0.4rem 0.4rem;
 	}
@@ -47,8 +42,6 @@
 
 	&__field {
 		border: 1px solid darken($palewhite, 12%);
-		display: flex;
-		align-items: center;
 		margin-top: 1.5rem;
 		padding: 0 1rem;
 		border-radius: 0.2rem;
@@ -63,10 +56,7 @@
 	}
 
 	&__input {
-		flex: 1;
-		border: none;
 		font-size: 0.95rem;
-		font-family: 'Roboto';
 		padding: 1rem 0;
 
 		&::placeholder {
@@ -75,8 +65,6 @@
 	}
 
 	&__submit {
-		border: none;
-		width: 100%;
 		margin-top: 1.5rem;
 		padding: 1rem 0;
 		border-radius: 0.2rem;

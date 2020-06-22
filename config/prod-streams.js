@@ -30,12 +30,7 @@ const styles = () => (
 		.pipe($.sass().on('error', $.sass.logError))
 		.pipe($.purifycss(['./src/scripts/*.js', './src/*.html']))
 		.pipe($.csso({ debug: true }))
-		.pipe($.autoprefixer({
-			browsers: [
-				'last 3 versions',
-				'> 1%'
-			]
-		}))
+		.pipe($.autoprefixer())
 		.pipe($.sourcemaps.write('../styles'))
 		.pipe(dest(dist.prod.sass))
 )
@@ -50,23 +45,10 @@ const scripts = () => (
 		.pipe(dest(dist.prod.js))
 )
 
-const images = () => (
+const icons = () => (
 	src(source.img)
 		.pipe($.imagemin())
 		.pipe(dest(dist.prod.img))
-)
-
-const fonts = () => (
-	src(source.fonts)
-		.pipe($.fontmin())
-		.pipe(dest(dist.prod.fonts))
-)
-
-const vendors = path => (
-	src(path)
-		.pipe($.concat(`vendors.min.${/\.css$/.test(path) ? 'css' : 'js'}`))
-		.pipe(/\.css$/.test(path) ? $.csso() : $.uglify())
-		.pipe(dest(dist.prod.vendors))
 )
 
 const serve = () => {
@@ -86,4 +68,4 @@ const size = () => (
 		}))
 )
 
-export { html, images, fonts, serve, vendors, size }
+export { html, icons, serve, size }

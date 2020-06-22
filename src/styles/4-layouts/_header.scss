@@ -1,16 +1,6 @@
 .header {
-	background: $black;
-	border-bottom: 1px solid rgba(255,255,255,.1);
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
+	@include coords(0, 0, null, 0);
 	z-index: 10;
-
-	&__right {
-		display: flex;
-		align-items: center;
-	}
 
 	&__search {
 		width: 250px;
@@ -19,68 +9,40 @@
 		padding: 0.45rem 1rem;
 		border: 2px solid lighten($black, 7%);
 		border-radius: 5rem;
-		color: $gray;
-	}
-
-	&__nav {
-		display: flex;
 	}
 
 	&__link {
 		padding: 1.5rem 1rem;
 	}
 
-	&__mobile-right {
-		display: none;
-	}
-
-	&__mobile-icon {
-		width: 30px;
-	}
-
 	&__search-dropdown {
-		background: #111111;
-		position: absolute;
-		width: 100%;
-		left: 0;
-		top: 101%;
-		padding: 1rem 0;
-		border-bottom: 1px solid rgba(255,255,255,.1);
+		@include coords(101%, null, null, 0);
 		display: none;
+		background: #111111;
+		padding: 1rem 0;
 	}
-	&__search-form {
-		display: flex;
 
-		> input:first-child {
-			flex: 1;
-		}
-	}
 	&__mobile-search {
-		border: none;
 		background: lighten($black, 10%);
 		padding: 0.45rem;
 		border-radius: 0.2rem 0 0 0.2rem;
 	}
+
 	&__submit {
-		border: none;
-		background: $green;
 		border-radius: 0 0.2rem 0.2rem 0;
 	}
+
 	&__search-options {
-		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 1rem 0;
 		margin-top: 0.7rem;
 	}
+
 	&__option {
 		width: 30%;
 	}
-	&__option-title {
-		text-align: center;
-	}
+
 	&__option-select {
-		width: 100%;
-		border: none;
 		background: lighten($black, 5%);
 		color: $palewhite;
 		padding: 0.45rem;

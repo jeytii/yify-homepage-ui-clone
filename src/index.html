@@ -4,22 +4,25 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 		<title>YTS Homepage Clone</title>
+		
 		<link rel="stylesheet" href="styles/index.css">
 	</head>
 	
 	<body>
-
 		<main>
 			
-			<header class="header">
-				<div class="header__wrapper flex--inline center">
+			<header class="pos--fixed bg--black bordered--top brdr--clear header">
+				<div class="header__wrapper d--flex ai--center jc--between center">
 					<a href="" class="header__logo">
 						<img src="https://yts.ag/assets/images/website/logo-YTS.svg" alt="" class="header__logo-image">
 					</a>
-					<div class="header__right">
-						<input type="text" name="movie-title" id="search" class="header__search text--bold text--gray" placeholder="Quick search">
-						<nav class="header__nav">
+					<div class="d--flex ai--center header__right">
+						<input type="text" name="movie-title" id="search" class="text--bold text--gray header__search" placeholder="Quick search">
+						<nav class="d--flex">
 							<a href="" class="header__link link text--bold text--gray">Home</a>
 							<a href="" class="header__link link text--bold text--gray">Browse Movies</a>
 							<a href="" class="header__link js-login-button text--bold text--white">Login</a>
@@ -27,26 +30,34 @@
 						</nav>
 					</div>
 					
-					<div class="header__mobile-right">
+					<div class="d--none header__mobile-right">
 						<nav class="header__mobile-nav">
-							<a href="" class="header__mobile-link js-search-button" title="Search"><img class="header__mobile-icon" src="assets/images/icons/search.svg"></a>
-							<a href="" class="header__mobile-link" title="Browse"><img class="header__mobile-icon" src="assets/images/icons/browse.svg"></a>
-							<a href="" class="header__mobile-link" title="User"><img class="header__mobile-icon" src="assets/images/icons/user.svg"></a>
+							<a href="" class="header__mobile-link js-search-button" title="Search">
+								<img class="header__mobile-icon" src="assets/icons/search.svg">
+							</a>
+							
+							<a href="" class="header__mobile-link" title="Browse">
+								<img class="header__mobile-icon" src="assets/icons/browse.svg">
+							</a>
+							
+							<a href="" class="header__mobile-link" title="User">
+								<img class="header__mobile-icon" src="assets/icons/user.svg">
+							</a>
 						</nav>
 					</div>
 				</div>
 				
-				<div class="header__search-dropdown js-search-dropdown">
+				<div class="pos--abs full-width bordered--bottom header__search-dropdown js-search-dropdown">
 					<div class="header__search-container center">
-						<form action="" class="header__search-form">
-							<input type="text" name="search" id="search--mobile" placeholder="Search for a movie..." class="header__mobile-search text--bold text--gray">
-							<input type="submit" value="Search" class="header__submit text--white">
+						<form action="" class="d--flex">
+							<input type="text" name="search" id="search--mobile" placeholder="Search for a movie..." class="flex--1 text--bold text--gray no-border header__mobile-search">
+							<input type="submit" value="Search" class="text--white bg--green no-border header__submit">
 						</form>
 					</div>
-					<div class="header__search-options">
+					<div class="d--grid header__search-options">
 						<div class="header__option center">
-							<h5 class="header__option-title text--bold text--gray">Quality:</h5>
-							<select name="quality" id="quality" class="header__option-select" value="All">
+							<h5 class="text--bold text--gray text--center">Quality:</h5>
+							<select name="quality" id="full-width no-border quality" class="header__option-select" value="All">
 								<option value="All">All</option>
 								<option value="720p">720p</option>
 								<option value="1080p">1080p</option>
@@ -54,8 +65,8 @@
 							</select>
 						</div>
 						<div class="header__option center">
-							<h5 class="header__option-title text--bold text--gray">Rating:</h5>
-							<select name="rating" id="rating" class="header__option-select" value="All">
+							<h5 class="text--bold text--gray text--center">Rating:</h5>
+							<select name="rating" id="rating" class="full-width no-border header__option-select" value="All">
 								<option value="All">All</option>
 								<option value="9+">9+</option>
 								<option value="8+">8+</option>
@@ -69,8 +80,8 @@
 							</select>
 						</div>
 						<div class="header__option center">
-							<h5 class="header__option-title text--bold text--gray">Genre:</h5>
-							<select name="genre" id="genre" class="header__option-select" value="All">
+							<h5 class="text--bold text--gray text--center">Genre:</h5>
+							<select name="genre" id="genre" class="full-width no-border header__option-select" value="All">
 								<option value="All">All</option>
 								<option value="Action">Action</option>
 								<option value="Adventure">Adventure</option>
@@ -82,8 +93,8 @@
 							</select>
 						</div>
 						<div class="header__option center">
-							<h5 class="header__option-title text--bold text--gray">Order By:</h5>
-							<select name="order-by" id="order-by" class="header__option-select" value="Latest">
+							<h5 class="text--bold text--gray text--center">Order By:</h5>
+							<select name="order-by" id="order-by" class="full-width no-border header__option-select" value="Latest">
 								<option value="Latest">Latest</option>
 								<option value="Oldest">Oldest</option>
 								<option value="Seeds">Seeds</option>
@@ -101,96 +112,96 @@
 
 
 
-			<section class="hero">		
-				<div class="hero__head">
+			<section class="pos--rel hero">		
+				<div class="text--center hero__head">
 					<h1 class="hero__title text--white">Download YTS YIFY movies: HD smallest size</h1>
 					<p class="hero__subtitle text--white">Welcome to the official <b>YTS.AM</b> website. Here you will be able to browse and download YIFY movies in excellent 720p, 1080p and 3D quality, all at the smallest file size. Only here: YTS Movies Torrents.</p>
 				</div>
 
 				<div class="hero__popular">
-					<h2 class="hero__popular-header">
-						<img src="assets/images/icons/star.svg" class="star" alt="">
+					<h2 class="text--center hero__popular-header">
+						<img src="assets/icons/star.svg" class="star" alt="">
 						<span class="hero__text text--white">Popular Downloads</span>
 					</h2>
 					
-					<div class="hero__cards center">
+					<div class="d--flex ai--center jc--between flex--wrap bordered--top brdr--clear hero__cards center">
 						<div class="card">
-							<div class="image-container">
-								<img src="assets/images/posters/ww.png" alt="Image" class="hero__card-img image">
-								<div class="overlay">
-									<div class="info text--white">
-										<img src="assets/images/icons/star.svg" class="hero__card-star star" alt="">
+							<div class="pos--rel cur--pointer image-container">
+								<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781641/yts-clone/posters/ww_thjomu.png" alt="Image" class="full-width hero__card-img">
+								<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+									<div class="text--white text--center info">
+										<img src="assets/icons/star.svg" class="hero__card-star star" alt="">
 										<h1 class="rating">7.5 / 10</h1>
 									</div>
-									<div class="info text--white">
+									<div class="text--white text--center info">
 										<h1 class="genre">Action<br>Fantasy</h1>
 									</div>
-									<div class="info">
-										<button class="button button--green text--bold text--white">View Details</button>
+									<div class="text--center info">
+										<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 									</div>
 								</div>
 							</div>
-							<a href="" class="text--bold palewhite title">Wonder Woman</a>
+							<a href="" class="d--block text--bold text--palewhite title">Wonder Woman</a>
 							<span class="text--gray year">2017</span>
 						</div>
 
 						<div class="card">
-							<div class="image-container">
-								<img src="assets/images/posters/avengers.png" alt="Image" class="hero__card-img image">
-								<div class="overlay">
-									<div class="info text--white">
-										<img src="assets/images/icons/star.svg" class="hero__card-star star" alt="">
+							<div class="pos--rel cur--pointer image-container">
+								<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781638/yts-clone/posters/avengers_qycbp9.png" alt="Image" class="full-width hero__card-img">
+								<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+									<div class="text--white text--center info">
+										<img src="assets/icons/star.svg" class="hero__card-star star" alt="">
 										<h1 class="rating">8.6 / 10</h1>
 									</div>
-									<div class="info text--white">
+									<div class="text--white text--center info">
 										<h1 class="genre">Action<br>Adventure</h1>
 									</div>
-									<div class="info">
-										<button class="button button--green text--bold text--white">View Details</button>
+									<div class="text--center info">
+										<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 									</div>
 								</div>
 							</div>
-							<a href="" class="text--bold palewhite title">Avengers: Infinity War</a>
+							<a href="" class="d--block text--bold text--palewhite title">Avengers: Infinity War</a>
 							<span class="text--gray year">2018</span>
 						</div>
 
 						<div class="card">
-							<div class="image-container">
-								<img src="assets/images/posters/dunkirk.png" alt="Image" class="hero__card-img image">
-								<div class="overlay">
-									<div class="info text--white">
-										<img src="assets/images/icons/star.svg" class="hero__card-star star" alt="">
+							<div class="pos--rel cur--pointer image-container">
+								<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781642/yts-clone/posters/dunkirk_qflgnb.png" alt="Image" class="full-width hero__card-img">
+								<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+									<div class="text--white text--center info">
+										<img src="assets/icons/star.svg" class="hero__card-star star" alt="">
 										<h1 class="rating">8 / 10</h1>
 									</div>
-									<div class="info text--white">
+									<div class="text--white text--center info">
 										<h1 class="genre">Drama<br>Thriller</h1>
 									</div>
-									<div class="info">
-										<button class="button button--green text--bold text--white">View Details</button>
+									<div class="text--center info">
+										<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 									</div>
 								</div>
 							</div>
-							<a href="" class="text--bold palewhite title">Dunkirk</a>
+							<a href="" class="d--block text--bold text--palewhite title">Dunkirk</a>
 							<span class="text--gray year">2017</span>
 						</div>
 
 						<div class="card">
-							<div class="image-container">
-								<img src="assets/images/posters/coco.png" alt="Image" class="hero__card-img image">
-								<div class="overlay">
-									<div class="info text--white">
-										<img src="assets/images/icons/star.svg" class="hero__card-star star" alt="">
+							<div class="pos--rel cur--pointer image-container">
+								<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781649/yts-clone/posters/coco_ffmkxo.png" alt="Image" class="full-width hero__card-img">
+								<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+									<div class="text--white text--center info">
+										<img src="assets/icons/star.svg" class="hero__card-star star" alt="">
 										<h1 class="rating">8.4 / 10</h1>
 									</div>
-									<div class="info text--white">
+									<div class="text--white text--center info">
 										<h1 class="genre">Fantasy<br>Animated</h1>
 									</div>
-									<div class="info">
-										<button class="button button--green text--bold text--white">View Details</button>
+									<div class="text--center info">
+										<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 									</div>
 								</div>
 							</div>
-							<a href="" class="text--bold palewhite title">Coco</a>
+							<a href="" class="d--block text--bold text--palewhite title">Coco</a>
 							<span class="text--gray year">2017</span>
 						</div>
 					
@@ -201,177 +212,177 @@
 
 
 			<section class="movies">				
-				<div class="section-header flex--inline center">
+				<div class="section-header d--flex ai--center jc--between center">
 					<h4 class="movies__header text--white">Latest YIFY Movie Torrents</h4>
 					<a class="movies__browse link text--bold text--gray" href="">Browse All</a>
 				</div>
 
-				<div class="movies__main center">
+				<div class="d--flex jc--around flex--wrap movies__main center">
 					<div class="card released">
-						<div class="image-container">
-							<span class="ribbon ribbon--black text--bold text--white">1080p</span>
-							<img src="assets/images/posters/antman.png" alt="Image" class="image">
-							<div class="overlay">
-								<div class="info text--white">
-									<img src="assets/images/icons/star.svg" class="star" alt="">
+						<div class="pos--rel cur--pointer image-container">
+							<span class="ribbon ribbon--black pos--abs text--center text--bold text--white">1080p</span>
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781649/yts-clone/posters/antman_huffxu.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<div class="text--white text--center info">
+									<img src="assets/icons/star.svg" class="star" alt="">
 									<h1 class="rating">7.3 / 10</h1>
 								</div>
-								<div class="info text--white">
+								<div class="text--white text--center info">
 									<h1 class="genre">Action<br>Adventure</h1>
 								</div>
-								<div class="info">
-									<button class="button button--green text--bold text--white">View Details</button>
+								<div class="text--center info">
+									<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 								</div>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">Ant-Man And The Wasp</a>
+						<a href="" class="d--block text--bold text--palewhite title">Ant-Man And The Wasp</a>
 						<span class="text--gray year">2018</span>
 					</div>
 
 					<div class="card released">
-						<div class="image-container">
-							<span class="ribbon ribbon--blue text--bold text--white">720p</span>
-							<img src="assets/images/posters/cr.png" alt="Image" class="image">
-							<div class="overlay">
-								<div class="info text--white">
-									<img src="assets/images/icons/star.svg" class="star" alt="">
+						<div class="pos--rel cur--pointer image-container">
+							<span class="ribbon ribbon--blue pos--abs text--center text--bold text--white">720p</span>
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781642/yts-clone/posters/cr_dohiqw.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<div class="text--white text--center info">
+									<img src="assets/icons/star.svg" class="star" alt="">
 									<h1 class="rating">7.7 / 10</h1>
 								</div>
-								<div class="info text--white">
+								<div class="text--white text--center info">
 									<h1 class="genre">Drama<br>Fantasy</h1>
 								</div>
-								<div class="info">
-									<button class="button button--green text--bold text--white">View Details</button>
+								<div class="text--center info">
+									<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 								</div>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">Christopher Robin</a>
+						<a href="" class="d--block text--bold text--palewhite title">Christopher Robin</a>
 						<span class="text--gray year">2018</span>
 					</div>
 
 					<div class="card released">
-						<div class="image-container">
-							<span class="ribbon ribbon--black text--bold text--white">1080p</span>
-							<img src="assets/images/posters/jl.png" alt="Image" class="image">
-							<div class="overlay">
-								<div class="info text--white">
-									<img src="assets/images/icons/star.svg" class="star" alt="">
+						<div class="pos--rel cur--pointer image-container">
+							<span class="ribbon ribbon--black pos--abs text--center text--bold text--white">1080p</span>
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781642/yts-clone/posters/jl_l9eoj5.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<div class="text--white text--center info">
+									<img src="assets/icons/star.svg" class="star" alt="">
 									<h1 class="rating">7.2 / 10</h1>
 								</div>
-								<div class="info text--white">
+								<div class="text--white text--center info">
 									<h1 class="genre">Action<br>Fantasy</h1>
 								</div>
-								<div class="info">
-									<button class="button button--green text--bold text--white">View Details</button>
+								<div class="text--center info">
+									<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 								</div>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">Justice League</a>
+						<a href="" class="d--block text--bold text--palewhite title">Justice League</a>
 						<span class="text--gray year">2017</span>
 					</div>
 
 					<div class="card released">
-						<div class="image-container">
-							<span class="ribbon ribbon--black text--bold text--white">1080p</span>
-							<img src="assets/images/posters/it.png" alt="Image" class="image">
-							<div class="overlay">
-								<div class="info text--white">
-									<img src="assets/images/icons/star.svg" class="star" alt="">
+						<div class="pos--rel cur--pointer image-container">
+							<span class="ribbon ribbon--black pos--abs text--center text--bold text--white">1080p</span>
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781646/yts-clone/posters/it_xd2u59.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<div class="text--white text--center info">
+									<img src="assets/icons/star.svg" class="star" alt="">
 									<h1 class="rating">7.9 / 10</h1>
 								</div>
-								<div class="info text--white">
+								<div class="text--white text--center info">
 									<h1 class="genre">Horror<br>Fantasy</h1>
 								</div>
-								<div class="info">
-									<button class="button button--green text--bold text--white">View Details</button>
+								<div class="text--center info">
+									<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 								</div>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">IT</a>
+						<a href="" class="d--block text--bold text--palewhite title">IT</a>
 						<span class="text--gray year">2017</span>
 					</div>
 
 					<div class="card released">
-						<div class="image-container">
-							<span class="ribbon ribbon--black text--bold text--white">1080p</span>
-							<img src="assets/images/posters/firstman.png" alt="Image" class="image">
-							<div class="overlay">
-								<div class="info text--white">
-									<img src="assets/images/icons/star.svg" class="star" alt="">
+						<div class="pos--rel cur--pointer image-container">
+							<span class="ribbon ribbon--black pos--abs text--center text--bold text--white">1080p</span>
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781643/yts-clone/posters/firstman_r7n8v4.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<div class="text--white text--center info">
+									<img src="assets/icons/star.svg" class="star" alt="">
 									<h1 class="rating">6.1 / 10</h1>
 								</div>
-								<div class="info text--white">
+								<div class="text--white text--center info">
 									<h1 class="genre">Drama<br>History</h1>
 								</div>
-								<div class="info">
-									<button class="button button--green text--bold text--white">View Details</button>
+								<div class="text--center info">
+									<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 								</div>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">First Man</a>
+						<a href="" class="d--block text--bold text--palewhite title">First Man</a>
 						<span class="text--gray year">2018</span>
 					</div>
 
 					<div class="card released">
-						<div class="image-container">
-							<span class="ribbon ribbon--blue text--bold text--white">720p</span>
-							<img src="assets/images/posters/bp.png" alt="Image" class="image">
-							<div class="overlay">
-								<div class="info text--white">
-									<img src="assets/images/icons/star.svg" class="star" alt="">
+						<div class="pos--rel cur--pointer image-container">
+							<span class="ribbon ribbon--blue pos--abs text--center text--bold text--white">720p</span>
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781646/yts-clone/posters/bp_zjvo8i.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<div class="text--white text--center info">
+									<img src="assets/icons/star.svg" class="star" alt="">
 									<h1 class="rating">7.4 / 10</h1>
 								</div>
-								<div class="info text--white">
+								<div class="text--white text--center info">
 									<h1 class="genre">Action<br>Fantasy</h1>
 								</div>
-								<div class="info">
-									<button class="button button--green text--bold text--white">View Details</button>
+								<div class="text--center info">
+									<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 								</div>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">Black Panther</a>
+						<a href="" class="d--block text--bold text--palewhite title">Black Panther</a>
 						<span class="text--gray year">2018</span>
 					</div>
 
 					<div class="card released">
-						<div class="image-container">
-							<span class="ribbon ribbon--black text--bold text--white">1080p</span>
-							<img src="assets/images/posters/incredibles.png" alt="Image" class="image">
-							<div class="overlay">
-								<div class="info text--white">
-									<img src="assets/images/icons/star.svg" class="star" alt="">
+						<div class="pos--rel cur--pointer image-container">
+							<span class="ribbon ribbon--black pos--abs text--center text--bold text--white">1080p</span>
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781644/yts-clone/posters/incredibles_pb5eva.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<div class="text--white text--center info">
+									<img src="assets/icons/star.svg" class="star" alt="">
 									<h1 class="rating">8.1 / 10</h1>
 								</div>
-								<div class="info text--white">
+								<div class="text--white text--center info">
 									<h1 class="genre">Animated<br>Fantasy</h1>
 								</div>
-								<div class="info">
-									<button class="button button--green text--bold text--white">View Details</button>
+								<div class="text--center info">
+									<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 								</div>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">Incredibles 2</a>
+						<a href="" class="d--block text--bold text--palewhite title">Incredibles 2</a>
 						<span class="text--gray year">2018</span>
 					</div>
 
 					<div class="card released">
-						<div class="image-container">
-							<span class="ribbon ribbon--blue text--bold text--white">720p</span>
-							<img src="assets/images/posters/jw.png" alt="Image" class="image">
-							<div class="overlay">
-								<div class="info text--white">
-									<img src="assets/images/icons/star.svg" class="star" alt="">
+						<div class="pos--rel cur--pointer image-container">
+							<span class="ribbon ribbon--blue pos--abs text--center text--bold text--white">720p</span>
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781649/yts-clone/posters/jw_djt8ri.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<div class="text--white text--center info">
+									<img src="assets/icons/star.svg" class="star" alt="">
 									<h1 class="rating">6.3 / 10</h1>
 								</div>
-								<div class="info text--white">
+								<div class="text--white text--center info">
 									<h1 class="genre">Adventure<br>Sci-Fi</h1>
 								</div>
-								<div class="info">
-									<button class="button button--green text--bold text--white">View Details</button>
+								<div class="text--center info">
+									<button class="button button--green no-border cur--pointer text--bold text--white">View Details</button>
 								</div>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">Jurassic World: Fallen Kingdom</a>
+						<a href="" class="d--block text--bold text--palewhite title">Jurassic World: Fallen Kingdom</a>
 						<span class="text--gray year">2018</span>
 					</div>
 
@@ -380,54 +391,54 @@
 
 
 
-			<section class="upcoming">				
-				<div class="section-header flex--inline center">
+			<section class="bg--paleblack upcoming">				
+				<div class="section-header d--flex ai--center jc--between center">
 					<h4 class="text--white">Upcoming YIFY Movies</h4>
 					<a class="link text--bold text--gray" href="">Request a Movie</a>
 				</div>
 
-				<div class="upcoming__main center">			
+				<div class="d--flex ai--center jc--between flex--wrap upcoming__main center">			
 					<div class="card">
-						<div class="image-container">
-							<img src="assets/images/posters/mi6.png" alt="Image" class="image">
-							<div class="overlay">
-								<button class="button button--orange text--bold text--white imdb">View IMDb</button>
+						<div class="pos--rel cur--pointer image-container">
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781641/yts-clone/posters/mi6_tsodr5.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<button class="button button--orange no-border cur--pointer text--bold text--white imdb">View IMDb</button>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">Mission: Impossible – Fallout</a>
+						<a href="" class="d--block text--bold text--palewhite title">Mission: Impossible – Fallout</a>
 						<span class="text--gray year">2018</span>
 					</div>
 
 					<div class="card">
-						<div class="image-container">
-							<img src="assets/images/posters/venom.png" alt="Image" class="image">
-							<div class="overlay">
-								<button class="button button--orange text--bold text--white imdb">View IMDb</button>
+						<div class="pos--rel cur--pointer image-container">
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781647/yts-clone/posters/venom_owhgao.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<button class="button button--orange no-border cur--pointer text--bold text--white imdb">View IMDb</button>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">Venom</a>
+						<a href="" class="d--block text--bold text--palewhite title">Venom</a>
 						<span class="text--gray year">2018</span>
 					</div>
 
 					<div class="card">
-						<div class="image-container">
-							<img src="assets/images/posters/tp.png" alt="Image" class="image">
-							<div class="overlay">
-								<button class="button button--orange text--bold text--white imdb">View IMDb</button>
+						<div class="pos--rel cur--pointer image-container">
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781644/yts-clone/posters/tp_aipkyz.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<button class="button button--orange no-border cur--pointer text--bold text--white imdb">View IMDb</button>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">The Predator</a>
+						<a href="" class="d--block text--bold text--palewhite title">The Predator</a>
 						<span class="text--gray year">2018</span>
 					</div>
 
 					<div class="card">
-						<div class="image-container">
-							<img src="assets/images/posters/halloween.png" alt="Image" class="image">
-							<div class="overlay">
-								<button class="button button--orange text--bold text--white imdb">View IMDb</button>
+						<div class="pos--rel cur--pointer image-container">
+							<img src="https://res.cloudinary.com/dt9ntq5vr/image/upload/v1592781638/yts-clone/posters/halloween_mffvli.png" alt="Image" class="full-width">
+							<div class="pos--abs full-width d--flex ai--center jc--center flex--column overlay">
+								<button class="button button--orange no-border cur--pointer text--bold text--white imdb">View IMDb</button>
 							</div>
 						</div>
-						<a href="" class="text--bold palewhite title">Halloween</a>
+						<a href="" class="d--block text--bold text--palewhite title">Halloween</a>
 						<span class="text--gray year">2018</span>
 					</div>
 
@@ -436,99 +447,144 @@
 
 
 
-			<section class="footer">
-				<div class="footer__mobile-block">
+			<section class="text--center bordered brdr--clear footer">
+				<div class="d--flex ai--center flex--wrap footer__mobile-block">
 					<div class="footer__mobile-link-block">
 						<a href="" class="footer__mobile-link">
-							<img class="footer__mobile-link-icon" src="assets/images/icons/suggestions.svg" alt=""><br>
+							<img class="footer__mobile-link-icon" src="assets/icons/suggestions.svg" alt=""><br>
 							<span class="footer__mobile-link-label text--white">Suggestions</span>
 						</a>
 					</div>
 					<div class="footer__mobile-link-block">
 						<a href="" class="footer__mobile-link">
-							<img class="footer__mobile-link-icon" src="assets/images/icons/requests.svg" alt=""><br>
+							<img class="footer__mobile-link-icon" src="assets/icons/requests.svg" alt=""><br>
 							<span class="footer__mobile-link-label text--white">Requests</span>
 						</a>
 					</div>
 					<div class="footer__mobile-link-block">
 						<a href="" class="footer__mobile-link">
-							<img class="footer__mobile-link-icon" src="assets/images/icons/blog.svg" alt=""><br>
+							<img class="footer__mobile-link-icon" src="assets/icons/blog.svg" alt=""><br>
 							<span class="footer__mobile-link-label text--white">Blog</span>
 						</a>
 					</div>
 					<div class="footer__mobile-link-block">
 						<a href="" class="footer__mobile-link">
-							<img class="footer__mobile-link-icon" src="assets/images/icons/api.svg" alt=""><br>
+							<img class="footer__mobile-link-icon" src="assets/icons/api.svg" alt=""><br>
 							<span class="footer__mobile-link-label text--white">API</span>
 						</a>
 					</div>
 					<div class="footer__mobile-link-block">
 						<a href="" class="footer__mobile-link">
-							<img class="footer__mobile-link-icon" src="assets/images/icons/rss.svg" alt=""><br>
+							<img class="footer__mobile-link-icon" src="/assets/icons/rss.svg" alt=""><br>
 							<span class="footer__mobile-link-label text--white">RSS</span>
 						</a>
 					</div>
 					<div class="footer__mobile-link-block">
 						<a href="" class="footer__mobile-link">
-							<img class="footer__mobile-link-icon" src="assets/images/icons/contact.svg" alt=""><br>
+							<img class="footer__mobile-link-icon" src="assets/icons/contact.svg" alt=""><br>
 							<span class="footer__mobile-link-label text--white">Contact</span>
 						</a>
 					</div>
 				</div>
-				<div class="footer__bar">
-					<span class="footer__credit text--gray">YTS @ 2011-2018</span>
-					<ul class="footer__list">
-						<li class="footer__list-item"><a href="" class="text--bold link text--gray">Blog</a></li>
-						<li class="footer__list-item"><a href="" class="text--bold link text--gray">DMCA</a></li>
-						<li class="footer__list-item"><a href="" class="text--bold link text--gray">API</a></li>
-						<li class="footer__list-item"><a href="" class="text--bold link text--gray">RSS</a></li>
-						<li class="footer__list-item"><a href="" class="text--bold link text--gray">Contact</a></li>
-						<li class="footer__list-item"><a href="" class="text--bold link text--gray">Browse Movies</a></li>
-						<li class="footer__list-item"><a href="" class="text--bold link text--gray">Requests</a></li>
-						<li class="footer__list-item"><a href="" class="text--bold link text--gray">Login</a></li>
+				<div class="bordered brdr--clear footer__bar">
+					<span class="d--ib text--gray">YTS @ 2011-2020</span>
+					<ul class="d--ib footer__list">
+						<li class="d--ib footer__list-item"><a href="" class="text--bold link text--gray">Blog</a></li>
+						<li class="d--ib footer__list-item"><a href="" class="text--bold link text--gray">DMCA</a></li>
+						<li class="d--ib footer__list-item"><a href="" class="text--bold link text--gray">API</a></li>
+						<li class="d--ib footer__list-item"><a href="" class="text--bold link text--gray">RSS</a></li>
+						<li class="d--ib footer__list-item"><a href="" class="text--bold link text--gray">Contact</a></li>
+						<li class="d--ib footer__list-item"><a href="" class="text--bold link text--gray">Browse Movies</a></li>
+						<li class="d--ib footer__list-item"><a href="" class="text--bold link text--gray">Requests</a></li>
+						<li class="d--ib footer__list-item"><a href="" class="text--bold link text--gray">Login</a></li>
 					</ul>
 				</div>
 			</section>
 
-			<section class="form js-form">
+			<section class="pos--fixed d--none full-width form js-form">
 				<div class="form__overlay">
 					
 					<div class="form__wrapper">
-						<div class="form__tabs">
-							<label class="form__login-tab js-login-tab text--gray active">Login</label>
-							<label class="form__register-tab js-register-tab text--gray">Register</label>
+						<div class="d--flex ai--center bg--palewhite form__tabs">
+							<label class="flex--1 text--gray text--center cur--pointer form__login-tab js-login-tab active">Login</label>
+							<label class="flex--1 text--gray text--center cur--pointer form__register-tab js-register-tab">Register</label>
 						</div>
-						<div class="form__container">
+						<div class="bg--white form__container">
 							<form action="" class="form__login js-login-form">
-								<div class="form__field">
-									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/user.svg" alt=""></span>
-									<input class="form__input" type="text" name="login-user" id="login-user" placeholder="Username or Email">
+								<div class="d--flex ai--center form__field">
+									<span class="form__icon-container">
+										<svg x="0px" y="0px" width="20px" height="20px" viewBox="0 0 438.529 438.529" style="enable-background:new 0 0 438.529 438.529;" xml:space="preserve">
+											<g>
+												<g>
+													<path d="M219.265,219.267c30.271,0,56.108-10.71,77.518-32.121c21.412-21.411,32.12-47.248,32.12-77.515    c0-30.262-10.708-56.1-32.12-77.516C275.366,10.705,249.528,0,219.265,0S163.16,10.705,141.75,32.115    c-21.414,21.416-32.121,47.253-32.121,77.516c0,30.267,10.707,56.104,32.121,77.515    C163.166,208.557,189.001,219.267,219.265,219.267z" fill="#919191"/>
+													<path d="M419.258,335.036c-0.668-9.609-2.002-19.985-3.997-31.121c-1.999-11.136-4.524-21.457-7.57-30.978    c-3.046-9.514-7.139-18.794-12.278-27.836c-5.137-9.041-11.037-16.748-17.703-23.127c-6.666-6.377-14.801-11.465-24.406-15.271    c-9.617-3.805-20.229-5.711-31.84-5.711c-1.711,0-5.709,2.046-11.991,6.139c-6.276,4.093-13.367,8.662-21.266,13.708    c-7.898,5.037-18.182,9.609-30.834,13.695c-12.658,4.093-25.361,6.14-38.118,6.14c-12.752,0-25.456-2.047-38.112-6.14    c-12.655-4.086-22.936-8.658-30.835-13.695c-7.898-5.046-14.987-9.614-21.267-13.708c-6.283-4.093-10.278-6.139-11.991-6.139    c-11.61,0-22.222,1.906-31.833,5.711c-9.613,3.806-17.749,8.898-24.412,15.271c-6.661,6.379-12.562,14.086-17.699,23.127    c-5.137,9.042-9.229,18.326-12.275,27.836c-3.045,9.521-5.568,19.842-7.566,30.978c-2,11.136-3.332,21.505-3.999,31.121    c-0.666,9.616-0.998,19.466-0.998,29.554c0,22.836,6.949,40.875,20.842,54.104c13.896,13.224,32.36,19.835,55.39,19.835h249.533    c23.028,0,41.49-6.611,55.388-19.835c13.901-13.229,20.845-31.265,20.845-54.104C420.264,354.502,419.932,344.652,419.258,335.036    z" fill="#919191"/>
+												</g>
+											</g>
+										</svg>
+									</span>
+									<input class="flex--1 no-border form__input" type="text" name="login-user" id="login-user" placeholder="Username or Email">
 								</div>
-								<div class="form__field">
-									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/password.svg" alt=""></span>
-									<input class="form__input" type="password" name="login-password" id="login-password" placeholder="Password">
+								<div class="d--flex ai--center form__field">
+									<span class="form__icon-container">
+										<svg x="0px" y="0px" width="20px" height="20px" viewBox="0 0 401.998 401.998" style="enable-background:new 0 0 401.998 401.998;" xml:space="preserve">
+											<g>
+												<path d="M357.45,190.721c-5.331-5.33-11.8-7.993-19.417-7.993h-9.131v-54.821c0-35.022-12.559-65.093-37.685-90.218   C266.093,12.563,236.025,0,200.998,0c-35.026,0-65.1,12.563-90.222,37.688C85.65,62.814,73.091,92.884,73.091,127.907v54.821   h-9.135c-7.611,0-14.084,2.663-19.414,7.993c-5.33,5.326-7.994,11.799-7.994,19.417V374.59c0,7.611,2.665,14.086,7.994,19.417   c5.33,5.325,11.803,7.991,19.414,7.991H338.04c7.617,0,14.085-2.663,19.417-7.991c5.325-5.331,7.994-11.806,7.994-19.417V210.135   C365.455,202.523,362.782,196.051,357.45,190.721z M274.087,182.728H127.909v-54.821c0-20.175,7.139-37.402,21.414-51.675   c14.277-14.275,31.501-21.411,51.678-21.411c20.179,0,37.399,7.135,51.677,21.411c14.271,14.272,21.409,31.5,21.409,51.675V182.728   z" fill="#919191"/>
+											</g>
+										</svg>
+									</span>
+									<input class="flex--1 no-border form__input" type="password" name="login-password" id="login-password" placeholder="Password">
 								</div>
-								<input class="form__submit button--green text--bold text--white" type="submit" value="Login">
+								<input class="full-width button--green text--bold text--white no-border form__submit" type="submit" value="Login">
 							</form>
 
 							<form action="" class="form__register js-register-form">
-								<div class="form__field">
-									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/user.svg" alt=""></span>
-									<input class="form__input" type="text" name="register-user" id="register-user" placeholder="Username">
+								<div class="d--flex ai--center form__field">
+									<span class="form__icon-container">
+										<svg x="0px" y="0px" width="20px" height="20px" viewBox="0 0 438.529 438.529" style="enable-background:new 0 0 438.529 438.529;" xml:space="preserve">
+											<g>
+												<g>
+													<path d="M219.265,219.267c30.271,0,56.108-10.71,77.518-32.121c21.412-21.411,32.12-47.248,32.12-77.515    c0-30.262-10.708-56.1-32.12-77.516C275.366,10.705,249.528,0,219.265,0S163.16,10.705,141.75,32.115    c-21.414,21.416-32.121,47.253-32.121,77.516c0,30.267,10.707,56.104,32.121,77.515    C163.166,208.557,189.001,219.267,219.265,219.267z" fill="#919191"/>
+													<path d="M419.258,335.036c-0.668-9.609-2.002-19.985-3.997-31.121c-1.999-11.136-4.524-21.457-7.57-30.978    c-3.046-9.514-7.139-18.794-12.278-27.836c-5.137-9.041-11.037-16.748-17.703-23.127c-6.666-6.377-14.801-11.465-24.406-15.271    c-9.617-3.805-20.229-5.711-31.84-5.711c-1.711,0-5.709,2.046-11.991,6.139c-6.276,4.093-13.367,8.662-21.266,13.708    c-7.898,5.037-18.182,9.609-30.834,13.695c-12.658,4.093-25.361,6.14-38.118,6.14c-12.752,0-25.456-2.047-38.112-6.14    c-12.655-4.086-22.936-8.658-30.835-13.695c-7.898-5.046-14.987-9.614-21.267-13.708c-6.283-4.093-10.278-6.139-11.991-6.139    c-11.61,0-22.222,1.906-31.833,5.711c-9.613,3.806-17.749,8.898-24.412,15.271c-6.661,6.379-12.562,14.086-17.699,23.127    c-5.137,9.042-9.229,18.326-12.275,27.836c-3.045,9.521-5.568,19.842-7.566,30.978c-2,11.136-3.332,21.505-3.999,31.121    c-0.666,9.616-0.998,19.466-0.998,29.554c0,22.836,6.949,40.875,20.842,54.104c13.896,13.224,32.36,19.835,55.39,19.835h249.533    c23.028,0,41.49-6.611,55.388-19.835c13.901-13.229,20.845-31.265,20.845-54.104C420.264,354.502,419.932,344.652,419.258,335.036    z" fill="#919191"/>
+												</g>
+											</g>
+										</svg>
+									</span>
+									<input class="flex--1 no-border form__input" type="text" name="register-user" id="register-user" placeholder="Username">
 								</div>
-								<div class="form__field">
-									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/email.svg" alt=""></span>
-									<input class="form__input" type="text" name="register-email" id="register-email" placeholder="Email">
+								<div class="d--flex ai--center form__field">
+									<span class="form__icon-container">
+										<svg x="0px" y="0px" width="20px" height="20px" viewBox="0 0 511.626 511.626" style="enable-background:new 0 0 511.626 511.626;" xml:space="preserve">
+											<g>
+												<g>
+													<path d="M49.106,178.729c6.472,4.567,25.981,18.131,58.528,40.685c32.548,22.554,57.482,39.92,74.803,52.099    c1.903,1.335,5.946,4.237,12.131,8.71c6.186,4.476,11.326,8.093,15.416,10.852c4.093,2.758,9.041,5.852,14.849,9.277    c5.806,3.422,11.279,5.996,16.418,7.7c5.14,1.718,9.898,2.569,14.275,2.569h0.287h0.288c4.377,0,9.137-0.852,14.277-2.569    c5.137-1.704,10.615-4.281,16.416-7.7c5.804-3.429,10.752-6.52,14.845-9.277c4.093-2.759,9.229-6.376,15.417-10.852    c6.184-4.477,10.232-7.375,12.135-8.71c17.508-12.179,62.051-43.11,133.615-92.79c13.894-9.703,25.502-21.411,34.827-35.116    c9.332-13.699,13.993-28.07,13.993-43.105c0-12.564-4.523-23.319-13.565-32.264c-9.041-8.947-19.749-13.418-32.117-13.418H45.679    c-14.655,0-25.933,4.948-33.832,14.844C3.949,79.562,0,91.934,0,106.779c0,11.991,5.236,24.985,15.703,38.974    C26.169,159.743,37.307,170.736,49.106,178.729z" fill="#919191"/>
+													<path d="M483.072,209.275c-62.424,42.251-109.824,75.087-142.177,98.501c-10.849,7.991-19.65,14.229-26.409,18.699    c-6.759,4.473-15.748,9.041-26.98,13.702c-11.228,4.668-21.692,6.995-31.401,6.995h-0.291h-0.287    c-9.707,0-20.177-2.327-31.405-6.995c-11.228-4.661-20.223-9.229-26.98-13.702c-6.755-4.47-15.559-10.708-26.407-18.699    c-25.697-18.842-72.995-51.68-141.896-98.501C17.987,202.047,8.375,193.762,0,184.437v226.685c0,12.57,4.471,23.319,13.418,32.265    c8.945,8.949,19.701,13.422,32.264,13.422h420.266c12.56,0,23.315-4.473,32.261-13.422c8.949-8.949,13.418-19.694,13.418-32.265    V184.437C503.441,193.569,493.927,201.854,483.072,209.275z" fill="#919191"/>
+												</g>
+											</g>
+										</svg>
+									</span>
+									<input class="flex--1 no-border form__input" type="text" name="register-email" id="register-email" placeholder="Email">
 								</div>
-								<div class="form__field">
-									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/password.svg" alt=""></span>
-									<input class="form__input" type="text" name="register-password" id="register-password" placeholder="Password">
+								<div class="d--flex ai--center form__field">
+									<span class="form__icon-container">
+										<svg x="0px" y="0px" width="20px" height="20px" viewBox="0 0 401.998 401.998" style="enable-background:new 0 0 401.998 401.998;" xml:space="preserve">
+											<g>
+												<path d="M357.45,190.721c-5.331-5.33-11.8-7.993-19.417-7.993h-9.131v-54.821c0-35.022-12.559-65.093-37.685-90.218   C266.093,12.563,236.025,0,200.998,0c-35.026,0-65.1,12.563-90.222,37.688C85.65,62.814,73.091,92.884,73.091,127.907v54.821   h-9.135c-7.611,0-14.084,2.663-19.414,7.993c-5.33,5.326-7.994,11.799-7.994,19.417V374.59c0,7.611,2.665,14.086,7.994,19.417   c5.33,5.325,11.803,7.991,19.414,7.991H338.04c7.617,0,14.085-2.663,19.417-7.991c5.325-5.331,7.994-11.806,7.994-19.417V210.135   C365.455,202.523,362.782,196.051,357.45,190.721z M274.087,182.728H127.909v-54.821c0-20.175,7.139-37.402,21.414-51.675   c14.277-14.275,31.501-21.411,51.678-21.411c20.179,0,37.399,7.135,51.677,21.411c14.271,14.272,21.409,31.5,21.409,51.675V182.728   z" fill="#919191"/>
+											</g>
+										</svg>
+									</span>
+									<input class="flex--1 no-border form__input" type="text" name="register-password" id="register-password" placeholder="Password">
 								</div>
-								<div class="form__field">
-									<span class="form__icon-container"><img class="form__icon" src="assets/images/icons/password.svg" alt=""></span>
-									<input class="form__input" type="password" id="confirmed-pw" placeholder="Confirm Password">
+								<div class="d--flex ai--center form__field">
+									<span class="form__icon-container">
+										<svg x="0px" y="0px" width="20px" height="20px" viewBox="0 0 401.998 401.998" style="enable-background:new 0 0 401.998 401.998;" xml:space="preserve">
+											<g>
+												<path d="M357.45,190.721c-5.331-5.33-11.8-7.993-19.417-7.993h-9.131v-54.821c0-35.022-12.559-65.093-37.685-90.218   C266.093,12.563,236.025,0,200.998,0c-35.026,0-65.1,12.563-90.222,37.688C85.65,62.814,73.091,92.884,73.091,127.907v54.821   h-9.135c-7.611,0-14.084,2.663-19.414,7.993c-5.33,5.326-7.994,11.799-7.994,19.417V374.59c0,7.611,2.665,14.086,7.994,19.417   c5.33,5.325,11.803,7.991,19.414,7.991H338.04c7.617,0,14.085-2.663,19.417-7.991c5.325-5.331,7.994-11.806,7.994-19.417V210.135   C365.455,202.523,362.782,196.051,357.45,190.721z M274.087,182.728H127.909v-54.821c0-20.175,7.139-37.402,21.414-51.675   c14.277-14.275,31.501-21.411,51.678-21.411c20.179,0,37.399,7.135,51.677,21.411c14.271,14.272,21.409,31.5,21.409,51.675V182.728   z" fill="#919191"/>
+											</g>
+										</svg>
+									</span>
+									<input class="flex--1 no-border form__input" type="password" id="confirmed-pw" placeholder="Confirm Password">
 								</div>
-								<input class="form__submit button--green text--bold text--white" type="submit" value="Register">
+								<input class="full-width button--green text--bold text--white no-border form__submit" type="submit" value="Register">
 							</form>
 						</div>
 					</div>
@@ -536,12 +592,10 @@
 				</div>
 			</section>
 		
-		</main>
-		
+		</main>		
 		
 
 		
-		<script src="assets/vendors/vendors.min.js"></script>
 		<script src="scripts/index.js"></script>
 	</body>
 </html>

@@ -35,9 +35,5 @@
 	"browserslist": [
 		"last 3 versions",
 		"> 1%"
-	],
-	"dependencies": {
-		"lodash.template": "^4.5.0",
-		"mem": "^6.1.0"
-	}
+	]
 }

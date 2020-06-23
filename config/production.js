@@ -1,24 +1,26 @@
 import { src, dest } from 'gulp'
 import gulpLoadPlugins from 'gulp-load-plugins'
 import streamSeries from 'stream-series'
-import bs from 'browser-sync'
+import bsync from 'browser-sync'
 import { source, dist, builds } from './paths'
 
 const $ = gulpLoadPlugins()
-const browserSync = bs.create()
+const browserSync = bsync.create()
 
 const html = () => (
 	src(source.html)
 		.pipe(streamSeries(styles(), scripts()))
 		.pipe($.htmlmin({
 			collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: {compress: {drop_console: true}},
-      processConditionalComments: true,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-			removeStyleLinkTypeAttributes: true
+			processConditionalComments: true,
+			removeComments: true,
+			removeEmptyAttributes: true,
+			removeScriptTypeAttributes: true,
+			removeStyleLinkTypeAttributes: true,
+			minifyCSS: true,
+			minifyJS: {
+				compress: { drop_console: true }
+			}
 		}))
 		.pipe(dest(dist.prod.html))
 )
@@ -54,9 +56,7 @@ const icons = () => (
 const serve = () => {
 	browserSync.init({
 		notify: false,
-		server: {
-			baseDir: ['./build']
-		}
+		server: { baseDir: ['./build'] }
 	})
 }
 

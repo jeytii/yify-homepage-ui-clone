@@ -1,11 +1,11 @@
 import { src, dest, watch, parallel } from 'gulp'
 import gulpLoadPlugins from 'gulp-load-plugins'
 import streamSeries from 'stream-series'
-import bs from 'browser-sync'
+import bsync from 'browser-sync'
 import { source, dist, watches } from './paths'
 
 const $ = gulpLoadPlugins()
-const browserSync = bs.create()
+const browserSync = bsync.create()
 
 const html = () => (
 	src(source.html)

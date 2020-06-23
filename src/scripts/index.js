@@ -1,7 +1,7 @@
 const query = document.querySelector.bind(document)
 const links = document.querySelectorAll('a')
 
-function unlink(e) {
+function prevent(e) {
 	e.preventDefault()
 }
 
@@ -53,7 +53,7 @@ function closeForm(e) {
 }
 
 links.forEach(link => {
-	link.addEventListener('click', unlink)
+	link.addEventListener('click', prevent)
 })
 
 window.addEventListener('keyup', hideForm)

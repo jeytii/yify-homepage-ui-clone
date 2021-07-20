@@ -1,39 +1,43 @@
 {
-	"name": "yts-clone",
-	"version": "1.0.0",
-	"main": "gulpfile.babel.js",
-	"scripts": {
-		"start": "gulp serve --env development",
-		"build:serve": "gulp build:serve --env production"
-	},
-	"license": "ISC",
-	"private": true,
-	"devDependencies": {
-		"@babel/core": "^7.12",
-		"@babel/preset-env": "^7.12",
-		"@babel/register": "^7.12",
-		"browser-sync": "^2.26",
-		"del": "^3.0.0",
-		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^7.0",
-		"gulp-babel": "^8.0.0",
-		"gulp-concat": "^2.6.1",
-		"gulp-csso": "^4.0",
-		"gulp-environment": "^1.5.2",
-		"gulp-htmlmin": "^5.0.1",
-		"gulp-if": "^3.0",
-		"gulp-imagemin": "^7.1",
-		"gulp-load-plugins": "^2.0",
-		"gulp-plumber": "^1.2",
-		"gulp-purifycss": "^0.2",
-		"gulp-sass": "^4.1.0",
-		"gulp-size": "^3.0.0",
-		"gulp-sourcemaps": "^3.0",
-		"gulp-uglify": "^3.0",
-		"stream-series": "^0.1.1"
-	},
-	"browserslist": [
-		"last 3 versions",
-		"> 1%"
-	]
+    "name": "yts-clone",
+    "version": "1.0.0",
+    "main": "vite.config.ts",
+    "homepage": "https://yify-homepage-clone.vercel.app",
+    "author": "Jonathan Tarnate <jstarnate16@gmail.com>",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "serve": "vite preview"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-responsive": "^8.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.3.2",
+        "@types/postcss-preset-env": "^6.7.3",
+        "@types/react": "^17.0.14",
+        "@types/react-dom": "^17.0.9",
+        "@types/react-responsive": "^8.0.3",
+        "@typescript-eslint/eslint-plugin": "^4.28.3",
+        "@typescript-eslint/parser": "^4.28.3",
+        "@vitejs/plugin-react-refresh": "^1.3.1",
+        "eslint": "^7.30.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.24.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "postcss": "^8.3.5",
+        "postcss-color-mod-function": "^3.0.3",
+        "postcss-preset-env": "^6.7.0",
+        "prettier": "^2.3.2",
+        "sass": "^1.35.2",
+        "typescript": "^4.3.5",
+        "vite": "^2.4.2"
+    }
 }

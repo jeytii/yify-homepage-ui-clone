@@ -1,0 +1,77 @@
+.root {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    inset: 0;
+	background: rgba(0, 0, 0, 0.90);
+	z-index: 20;
+    padding: 1rem;
+}
+
+.wrap {
+    max-width: 550px;
+    margin: 5vw auto 0 auto;
+    box-shadow: 0 8px 5px -4px rgba(0, 0, 0, 0.5);
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    background: var(--white--dark);
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.tab {
+    flex: 1;
+    font-size: 1.1rem;
+    color: var(--gray);
+    text-align: center;
+    padding: 1.5rem 0;
+    cursor: pointer;
+}
+
+.login_tab {
+    border-top-left-radius: 0.4rem;
+}
+
+.register_tab {
+    border-top-right-radius: 0.4rem;
+}
+
+.tab_radio {
+    display: none;
+}
+
+.active_tab {
+    background: var(--white);
+	color: var(--accent--primary);
+	font-weight: 700;
+	cursor: default;
+}
+
+.form_container {
+    background: var(--white);
+    padding: 1.5rem 0;
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.form {
+    width: 90%;
+    margin: auto;
+}
+
+.submit_button {
+    width: 100%;
+    background: var(--accent--primary);
+    color: var(--white);
+    font-weight: 700;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+	cursor: pointer;
+
+	&:hover {
+		background: color-mod(var(--accent--primary) l(45%));
+	}
+}

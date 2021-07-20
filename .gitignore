@@ -1,4 +1,5 @@
 node_modules
-.tmp
-build
-yarn.lock
+.DS_Store
+dist
+dist-ssr
+*.local

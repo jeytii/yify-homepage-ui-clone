@@ -1,8 +1,8 @@
 {
-    "name": "yts-clone",
+    "name": "yify-homepage-ui-clone",
     "version": "1.0.0",
     "main": "vite.config.ts",
-    "homepage": "https://yify-homepage-clone.vercel.app",
+    "homepage": "https://yify-homepage-ui-clone.vercel.app",
     "author": "Jonathan Tarnate <jstarnate16@gmail.com>",
     "scripts": {
         "dev": "vite",

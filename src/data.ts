@@ -161,7 +161,7 @@ export const upcomingMovies: UpcomingMovie[] = [
     {
         key: 1,
         imageUrl:
-            'https://res.cloudinary.com/dt9ntq5vr/image/upload/w_500,h_750/v1592873270/yts-clone/posters/nj5HmHRZsrYQEYYXyAusFv35erP_v32uo1.jpg',
+            'https://res.cloudinary.com/dt9ntq5vr/image/upload/w_500,h_750/v1592874951/yts-clone/posters/Dune_Twitter_fhqg11.jpg',
         title: 'Dune',
         year: 2021,
     },

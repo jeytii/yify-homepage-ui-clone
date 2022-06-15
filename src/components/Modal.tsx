@@ -5,16 +5,16 @@ import { StoreContext } from './App';
 const modalRoot = document.querySelector('#modal');
 
 export default function Modal({ children }: { children: ReactNode }) {
-    const store = useContext(StoreContext);
-    const container = document.createElement('div');
+  const store = useContext(StoreContext);
+  const container = document.createElement('div');
 
-    useEffect(() => {
-        modalRoot?.appendChild(container);
+  useEffect(() => {
+    modalRoot?.appendChild(container);
 
-        return () => {
-            modalRoot?.removeChild(container);
-        };
-    }, [store?.state.formType]);
+    return () => {
+      modalRoot?.removeChild(container);
+    };
+  }, [store, container]);
 
-    return createPortal(children, container);
+  return createPortal(children, container);
 }

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	@apply text-[15px] box-border outline-0;
+	font-family: 'Roboto', sans-serif;
+}
+
+a[href] {
+	@apply text-gray no-underline hover:text-gray-lightest;
+}
+
+img[src], svg {
+	@apply block;
+}
